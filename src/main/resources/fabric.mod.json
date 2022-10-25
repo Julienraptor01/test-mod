@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "julienraptor01_fabric_example_mod",
+  "version": "${version}",
+
+  "name": "Example Mod",
+  "description": "This is an example description !",
+  "authors": [
+    "Julienraptor01"
+  ],
+  "contact": {
+    "homepage": "https://julienraptor01.github.io/",
+    "sources": "https://github.com/Julienraptor01/fabric-example-mod"
+  },
+
+  "license": "CC BY-NC-SA 4.0",
+  "icon": "assets/julienraptor01_fabric_example_mod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.julienraptor01.julienraptor01_fabric_example_mod.ExampleMod"
+    ]
+  },
+  "mixins": [
+    "julienraptor01_fabric_example_mod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
