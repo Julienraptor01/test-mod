@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.julienraptor01.julienraptor01_fabric_example_mod.mixin",
+  "package": "me.julienraptor01.julienraptor01_testmod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "TestMixin"
   ],
   "injectors": {
     "defaultRequire": 1

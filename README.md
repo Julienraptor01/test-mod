@@ -1,3 +1,3 @@
-# Fabric Example Mod
+# Test Mod
 
-The template for all my mods
+My test mod
