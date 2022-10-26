@@ -3,8 +3,8 @@
   "id": "julienraptor01_testmod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description !",
+  "name": "Test Mod",
+  "description": "This is my testmod lol !",
   "authors": [
     "Julienraptor01"
   ],

@@ -1,16 +1,24 @@
+// mixin into DamageEnchantment class and make canAccept method and isAcceptableItem method return true
 package me.julienraptor01.julienraptor01_testmod.mixin;
 
-import me.julienraptor01.julienraptor01_testmod.TestMod;
-import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.enchantment.Enchantment;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(TitleScreen.class)
+import net.minecraft.enchantment.DamageEnchantment;
+import net.minecraft.item.ItemStack;
+
+@Mixin(DamageEnchantment.class)
 public class TestMixin {
-	@Inject(at = @At("HEAD"), method = "init()V")
-	private void init(CallbackInfo info) {
-		TestMod.LOGGER.info("This line is printed by an example mod mixin!");
-	}
+    @Inject(at = @At("HEAD"), method = "isAcceptableItem", cancellable = true)
+    private void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> info) {
+        info.setReturnValue(true);
+    }
+
+    @Inject(at = @At("HEAD"), method = "canAccept", cancellable = true)
+    private void canAccept(Enchantment other, CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(false);
+    }
 }
