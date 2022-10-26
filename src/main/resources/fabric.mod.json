@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "julienraptor01_fabric_example_mod",
+  "id": "julienraptor01_testmod",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -14,16 +14,16 @@
   },
 
   "license": "CC BY-NC-SA 4.0",
-  "icon": "assets/julienraptor01_fabric_example_mod/icon.png",
+  "icon": "assets/julienraptor01_testmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.julienraptor01.julienraptor01_fabric_example_mod.ExampleMod"
+      "me.julienraptor01.julienraptor01_testmod.TestMod"
     ]
   },
   "mixins": [
-    "julienraptor01_fabric_example_mod.mixins.json"
+    "julienraptor01_testmod.mixins.json"
   ],
 
   "depends": {
